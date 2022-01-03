@@ -1,0 +1,37 @@
+body{
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color: white;
+    font-size: 4em;
+}
+h2::before{
+    content: " ";
+    position: absolute;
+    left: 120%;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100%);
+    animation: test;
+    animation-duration: 12s;
+    animation-timing-function: ease-in;
+}
+@keyframes test {
+    0%, 66%{
+        color: red;
+        left: -20%;
+    }
+    33%, 100%{
+        left: 120%;
+    }
+}
+
+@media (max-width : 620px) {
+    h2{
+        font-size: 2em;
+    }
+}
